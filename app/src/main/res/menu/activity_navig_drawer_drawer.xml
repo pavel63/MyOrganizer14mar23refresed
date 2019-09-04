@@ -4,7 +4,7 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
-        <item
+       <!-- <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_menu_camera"
             android:title="@string/menu_home" />
@@ -15,7 +15,20 @@
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:title="@string/menu_slideshow" /> -->
+
+        <item
+            android:id="@+id/bottom_navigation_list_m"
+            android:icon="@drawable/ic_format_list_numbered_white_24dp"
+            android:title="@string/task_list" />
+        <item
+            android:id="@+id/bottom_navigation_projects_m"
+            android:icon="@drawable/ic_folder_black_24dp"
+            android:title="@string/projects" />
+        <item
+            android:id="@+id/bottom_navigation_quotas_m"
+            android:icon="@drawable/ic_assignment_black_24dp"
+            android:title="@string/quotas" />
         <item
             android:id="@+id/nav_tools"
             android:icon="@drawable/ic_menu_manage"

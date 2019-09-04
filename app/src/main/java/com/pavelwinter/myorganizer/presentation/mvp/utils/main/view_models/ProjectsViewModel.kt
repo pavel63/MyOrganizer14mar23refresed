@@ -1,4 +1,4 @@
-package com.pavelwinter.myorganizer.presentation.mvp.utils.main.fragments
+package com.pavelwinter.myorganizer.presentation.mvp.utils.main.view_models
 
 import androidx.lifecycle.ViewModel
 

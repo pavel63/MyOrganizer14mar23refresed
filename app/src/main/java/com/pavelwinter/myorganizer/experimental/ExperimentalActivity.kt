@@ -3,8 +3,9 @@ package com.pavelwinter.myorganizer.experimental
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.pavelwinter.myorganizer.R
+import com.pavelwinter.myorganizer.presentation.mvp.utils.main.fragments.Forms.AddTaskFragment
 
-class Experimental : AppCompatActivity() {
+class ExperimentalActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -12,7 +13,7 @@ class Experimental : AppCompatActivity() {
 
 
         supportFragmentManager .beginTransaction()
-            .add(R.id.frameForFragment, ProjectsFragment())
+            .add(R.id.frameForFragment, AddTaskFragment())
             .commit()
     }
 }

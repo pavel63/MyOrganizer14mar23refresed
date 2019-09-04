@@ -4,6 +4,5 @@ import android.view.View
 
  class QuotaModel(
     var describing :String,
-    var percentView : View,
     var percentRest : Int,
     var percentDone : Int) : BaseModel()

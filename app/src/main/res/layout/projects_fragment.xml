@@ -5,12 +5,17 @@
     android:layout_height="match_parent"
     tools:context=".presentation.mvp.utils.main.fragments.ProjectsFragment">
 
-
-    <ExpandableListView
-        android:id="@+id/expListView"
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-    </ExpandableListView>
+        android:layout_height="wrap_content"/>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="@dimen/margin_16"
+        android:src="@drawable/ic_add_white_24dp" />
 
 </FrameLayout>

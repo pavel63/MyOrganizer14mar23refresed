@@ -23,4 +23,8 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="task_list">Task list</string>
+    <string name="projects_">Projects</string>
+    <string name="you_can_add_describing">you can add describing</string>
+    <string name="name">name of task</string>
 </resources>
