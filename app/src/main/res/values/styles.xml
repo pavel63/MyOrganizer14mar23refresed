@@ -36,4 +36,30 @@
     </style>
 
 
+        <style name="EditField">
+
+            <item name="android:layout_width">wrap_content</item>
+            <item name="android:layout_height">wrap_content</item>
+            <item name="android:layout_gravity">center</item>
+            <item name="android:gravity">center</item>
+            <item name="android:ems">10</item>
+        </style>
+
+
+        <style name="WhiteElem">
+            <item name="android:background">#ffffff</item>
+            <item name="android:layout_width">wrap_content</item>
+            <item name="android:layout_height">wrap_content</item>
+        </style>
+
+
+        <style name="AddTaskElements">
+            <item name="android:layout_marginTop">20dp</item>
+            <item name="android:layout_width">match_parent</item>
+            <item name="android:layout_height">wrap_content</item>
+            <item name="android:layout_marginRight">30dp</item>
+            <item name="android:layout_marginLeft">30dp</item>
+
+        </style>
+
 </resources>

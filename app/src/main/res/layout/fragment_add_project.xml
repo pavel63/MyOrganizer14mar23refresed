@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/textInputLayoutProject">
+        <EditText
+            style="@style/AddTaskElements"
+            android:id="@+id/editTextNameProject"
+            android:layout_marginTop="23dp"
+            android:hint="Add name of your project here"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Spinner
+        android:layout_below="@+id/textInputLayoutProject"
+        style="@style/AddTaskElements"
+        android:id="@+id/spinner_priorityProject">
+    </Spinner>
+
+    <Spinner
+        android:layout_marginBottom="20dp"
+        style="@style/AddTaskElements"
+        android:id="@+id/spinner_time_spend_project"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/spinner_priorityProject">
+    </Spinner>
+
+
+    <LinearLayout
+        android:id="@+id/timing_project"
+        android:paddingTop="30dp"
+        android:layout_below="@id/spinner_priorityProject"
+        android:orientation="vertical"
+        style="@style/AddTaskElements">
+
+        <RelativeLayout
+            style="@style/AddTaskElements">
+            <Button
+                android:id="@+id/from_data_project"
+                style="@style/WhiteElem"/>
+
+            <Button
+                android:layout_alignParentRight="true"
+                android:id="@+id/from_time_project"
+                style="@style/WhiteElem"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            style="@style/AddTaskElements">
+
+            <Button
+                android:id="@+id/to_data_project"
+                style="@style/WhiteElem"/>
+
+            <Button
+                android:layout_alignParentRight="true"
+                android:id="@+id/to_time_project"
+                style="@style/WhiteElem"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+
+    <RelativeLayout
+        android:layout_below="@+id/timing_project"
+        android:layout_marginBottom="20dp"
+        style="@style/AddTaskElements"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/spinner_category_project"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <!--
+
+                <Spinner
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/spinner_project"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+        -->
+
+    </RelativeLayout>
+
+
+    <Button
+        style="@style/AddTaskElements"
+        android:id="@+id/button_add_project"
+        android:text="Add project"
+        android:layout_marginBottom="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

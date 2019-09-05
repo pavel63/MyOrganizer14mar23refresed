@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical">
 
     <com.google.android.material.textfield.TextInputLayout
@@ -10,7 +11,9 @@
 
         <EditText
             android:id="@+id/add_task_form_title_et"
-            style="@style/WidthWrap" />
+            style="@style/WidthWrap"
+            android:gravity="center_horizontal"
+            android:hint="@string/type_name_of_task" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -20,7 +23,9 @@
         <EditText
             android:id="@+id/add_task_form_tdescribing_et"
             style="@style/WidthWrap"
-            android:minHeight="100dp" />
+            android:gravity="center_horizontal|center_vertical"
+            android:hint="@string/add_describing_of_task"
+            android:minHeight="80dp"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <Spinner
@@ -44,18 +49,18 @@
         android:spinnerMode="dropdown" />
 
     <Button
-        android:drawableLeft="@drawable/ic_date_range_black_24dp"
-        android:drawablePadding="4dp"
-        android:layout_marginTop="@dimen/margin_16"
-        android:layout_gravity="center_horizontal"
         android:id="@+id/add_task_form_choose_time_btn"
         style="@style/WrapWrap"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_16"
+        android:drawableLeft="@drawable/ic_date_range_black_24dp"
+        android:drawablePadding="4dp"
         android:text="@string/choose_time" />
 
     <Button
-        android:layout_marginTop="@dimen/margin_16"
-        android:text="@string/commit"
         android:layout_width="match_parent"
-        android:layout_height="50dp"/>
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/margin_16"
+        android:text="@string/commit" />
 
 </LinearLayout>

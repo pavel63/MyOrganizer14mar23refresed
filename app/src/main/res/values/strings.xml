@@ -29,4 +29,8 @@
     <string name="name">name of task</string>
     <string name="choose_time">Choose time</string>
     <string name="commit">Commit</string>
+    <string name="type_name_of_task">type name of task</string>
+    <string name="add_describing_of_task">Add describing of task</string>
+    <string name="quota_name">Quota name</string>
+    <string name="add_this_quota">Add this quota</string>
 </resources>

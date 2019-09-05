@@ -3,6 +3,8 @@ package com.pavelwinter.myorganizer.experimental
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.pavelwinter.myorganizer.R
+import com.pavelwinter.myorganizer.presentation.mvp.utils.main.fragments.Forms.AddProjectFragment
+import com.pavelwinter.myorganizer.presentation.mvp.utils.main.fragments.Forms.AddQuotaFragment
 import com.pavelwinter.myorganizer.presentation.mvp.utils.main.fragments.Forms.AddTaskFragment
 
 class ExperimentalActivity : AppCompatActivity() {
@@ -13,7 +15,7 @@ class ExperimentalActivity : AppCompatActivity() {
 
 
         supportFragmentManager .beginTransaction()
-            .add(R.id.frameForFragment, AddTaskFragment())
+            .add(R.id.frameForFragment, AddProjectFragment())
             .commit()
     }
 }
