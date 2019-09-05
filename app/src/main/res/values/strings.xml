@@ -27,4 +27,6 @@
     <string name="projects_">Projects</string>
     <string name="you_can_add_describing">you can add describing</string>
     <string name="name">name of task</string>
+    <string name="choose_time">Choose time</string>
+    <string name="commit">Commit</string>
 </resources>

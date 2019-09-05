@@ -1,59 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:hint="@string/name" />
+        <EditText
+            android:id="@+id/add_task_form_title_et"
+            style="@style/WidthWrap" />
     </com.google.android.material.textfield.TextInputLayout>
 
-
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:minHeight="100dp"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/you_can_add_describing" />
+        <EditText
+            android:id="@+id/add_task_form_tdescribing_et"
+            style="@style/WidthWrap"
+            android:minHeight="100dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Spinner
-        android:id="@+id/spinner1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/add_task_form_projects_spinner"
+        style="@style/WidthWrap"
         android:background="@android:drawable/btn_dropdown"
-        android:spinnerMode="dropdown"/>
+        android:spinnerMode="dropdown" />
 
+    <Spinner
+        android:id="@+id/add_task_form_categories_spinner"
+        style="@style/WidthWrap"
+        android:layout_marginTop="20dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown" />
 
-    <NumberPicker
-        android:id="@+id/hour_picker"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+    <Spinner
+        android:id="@+id/add_task_form_priority_spinner"
+        style="@style/WidthWrap"
+        android:layout_marginTop="20dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown" />
 
-    <!--<NumberPicker
-       android:id="@+id/minute_picker"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"/>
+    <Button
+        android:drawableLeft="@drawable/ic_date_range_black_24dp"
+        android:drawablePadding="4dp"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/add_task_form_choose_time_btn"
+        style="@style/WrapWrap"
+        android:text="@string/choose_time" />
 
-   <NumberPicker
-       android:id="@+id/period_picker"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"/>-->
-
-    <CalendarView
-        android:id="@+id/calendarView"
+    <Button
+        android:layout_marginTop="@dimen/margin_16"
+        android:text="@string/commit"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="50dp"/>
 
 </LinearLayout>
