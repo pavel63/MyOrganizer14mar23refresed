@@ -6,13 +6,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.pavelwinter.myorganizer.R
+import com.pavelwinter.myorganizer.data.db.db_entities.ParentType
 import com.pavelwinter.myorganizer.presentation.mvp.utils.main.utils.PriorityInterface
 import com.pavelwinter.myorganizer.presentation.mvp.utils.main.models.TasksModel
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.row_tasks.view.*
 
 
-class TasksAdapter(var tasksList: List<TasksModel>) :
+class TasksAdapter(var tasksList: List<ParentType>) :
     RecyclerView.Adapter<TasksAdapter.TasksViewHolder>() {
 
     override fun getItemCount() = tasksList.size
@@ -35,24 +36,24 @@ class TasksAdapter(var tasksList: List<TasksModel>) :
         override val containerView: View?
             get() = itemView
 
-        fun bind(model: TasksModel) {
+        fun bind(model: ParentType) {
 
             with(model) {
 
                when(model.priority){
-                    PriorityInterface.HIGH_PRIORITY->{
+                    PriorityInterface.HIGH_PRIORITY.ordinal->{
                         itemView.row_tasks_indicator_v.setBackgroundColor(Color.RED)
                     }
-                    PriorityInterface.MIDDLE_PRIORITY->{
+                    PriorityInterface.MIDDLE_PRIORITY.ordinal->{
                         itemView.row_tasks_indicator_v.setBackgroundColor(Color.YELLOW)
                     }
-                    PriorityInterface.LOW_PRIORITY->{
+                    PriorityInterface.LOW_PRIORITY.ordinal->{
                         itemView.row_tasks_indicator_v.setBackgroundColor(Color.GREEN)
                     }
                 }
 
                 itemView.row_tasks_name_tv.text = model.title
-                itemView.row_tasks_percent_tv .text = model.restPercent.toString()
+                itemView.row_tasks_rest_tv .text = model.percentDone.toString()
             }
         }
 

@@ -1,14 +1,14 @@
 package com.pavelwinter.myorganizer.presentation.mvp.utils.main.utils
 
-enum class PriorityInterface() {
+enum class PriorityInterface(inta : Int) {
 
     /** red color */
-    HIGH_PRIORITY(),
+    HIGH_PRIORITY(1),
 
     /** yellow color */
-    MIDDLE_PRIORITY(),
+    MIDDLE_PRIORITY(2),
 
     /**green color*/
-    LOW_PRIORITY()
+    LOW_PRIORITY(3)
 
 }

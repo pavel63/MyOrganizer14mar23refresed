@@ -8,6 +8,7 @@
     tools:context=".presentation.mvp.utils.main.fragments.TaskListFragment">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/task_list_fragment_rv"
         app:layout_constraintTop_toTopOf="parent"
         tools:itemCount="20"
         tools:listitem="@layout/row_tasks"

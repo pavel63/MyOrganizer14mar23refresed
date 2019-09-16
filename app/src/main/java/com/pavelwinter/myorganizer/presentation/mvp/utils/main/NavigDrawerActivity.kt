@@ -43,10 +43,10 @@ class NavigDrawerActivity : AppCompatActivity() {
                 this,
                 supportFragmentManager
             )
-        val viewPager: ViewPager = findViewById(R.id.view_pager)
+      /*  val viewPager: ViewPager = findViewById(R.id.view_pager)
        viewPager.adapter = sectionsPagerAdapter
         val tabs: TabLayout = findViewById(R.id.tabs)
-        tabs.setupWithViewPager(viewPager)
+        tabs.setupWithViewPager(viewPager)*/
 
         //!!!!
        // tabs.visibility = View.GONE
@@ -73,7 +73,7 @@ class NavigDrawerActivity : AppCompatActivity() {
         //menu should be considered as top level destinations.
 
 
-        appBarConfiguration = AppBarConfiguration(
+        /*appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.bottom_navigation_list_m, R.id.bottom_navigation_projects_m, R.id.bottom_navigation_quotas_m,
                 R.id.nav_tools, R.id.nav_share, R.id.nav_send
@@ -81,6 +81,7 @@ class NavigDrawerActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+         */
     }
 
 

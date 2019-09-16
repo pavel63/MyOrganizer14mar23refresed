@@ -6,6 +6,9 @@
     tools:context=".presentation.mvp.utils.main.fragments.ProjectsFragment">
 
     <androidx.recyclerview.widget.RecyclerView
+        tools:itemCount="10"
+        tools:listitem="@layout/row_project_item"
+        android:id="@+id/projects_fragment_rv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 

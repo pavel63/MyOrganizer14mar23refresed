@@ -5,12 +5,13 @@ import android.view.ViewGroup
 import com.pavelwinter.myorganizer.R
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
+import com.pavelwinter.myorganizer.data.db.db_entities.ParentType
 import com.pavelwinter.myorganizer.presentation.mvp.utils.main.models.QuotaModel
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.row_quota.view.*
 
 
-class QuotaAdapter(var quotaList: List<QuotaModel>) :
+class QuotaAdapter(var quotaList: List<ParentType>) :
     RecyclerView.Adapter<QuotaAdapter.QuotaViewHolder>() {
 
     override fun getItemCount() = quotaList.size
@@ -33,13 +34,13 @@ class QuotaAdapter(var quotaList: List<QuotaModel>) :
         override val containerView: View?
             get() = itemView
 
-        fun bind(model: QuotaModel) {
+        fun bind(model: ParentType) {
 
             with(model) {
                 itemView.row_quota_name_tv.text = model.title
                 itemView.row_quota_repeats_tv.text = model.describing
                 itemView.row_quota_done_tv .text = model.percentDone.toString()
-                itemView.row_quota_rest_tv .text = model.percentRest.toString()
+                //itemView.row_quota_rest_tv .text = model.percentDone.toString()
                // itemView.row_quota_percent_string_tv.background = model.percentDone
             }
         }

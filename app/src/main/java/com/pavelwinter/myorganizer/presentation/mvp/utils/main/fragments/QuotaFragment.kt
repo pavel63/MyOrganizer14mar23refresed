@@ -9,6 +9,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 
 import com.pavelwinter.myorganizer.R
+import com.pavelwinter.myorganizer.data.db.db_entities.ParentType
+import com.pavelwinter.myorganizer.data.mocks.DataTypesGenerator
 import com.pavelwinter.myorganizer.presentation.mvp.utils.main.view_models.QuotaViewModel
 import com.pavelwinter.myorganizer.presentation.mvp.utils.main.adapters.QuotaAdapter
 import com.pavelwinter.myorganizer.presentation.mvp.utils.main.models.QuotaModel
@@ -35,13 +37,15 @@ class QuotaFragment : Fragment() {
         viewModel = ViewModelProviders.of(this).get(QuotaViewModel::class.java)
 
         // TODO: Use the ViewModel
+
+        setList(DataTypesGenerator.generateParentList())
     }
 
 
 
 
 
-    private fun setList(quotaModelList : List<QuotaModel>){
+    private fun setList(quotaModelList : List<ParentType>){
 
         with(quota_fragment_rv) {
             adapter = QuotaAdapter(quotaModelList)
