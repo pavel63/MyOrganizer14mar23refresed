@@ -1,4 +1,4 @@
-package com.pavelwinter.myorganizer.presentation.mvp.utils.main.fragments;
+package com.pavelwinter.myorganizer.presentation.fragments;
 
 import android.content.Context;
 import android.os.Bundle;

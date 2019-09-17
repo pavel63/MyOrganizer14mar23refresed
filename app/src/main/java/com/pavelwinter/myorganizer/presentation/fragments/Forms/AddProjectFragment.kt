@@ -1,4 +1,4 @@
-package com.pavelwinter.myorganizer.presentation.mvp.utils.main.fragments.Forms
+package com.pavelwinter.myorganizer.presentation.fragments.Forms
 
 
 import android.app.DatePickerDialog
@@ -12,11 +12,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
-import com.google.android.material.textfield.TextInputLayout
 
 import com.pavelwinter.myorganizer.R
-import com.pavelwinter.myorganizer.data.db.db_entities.DaoSession
-import com.pavelwinter.myorganizer.presentation.mvp.utils.main.utils.App
 import kotlinx.android.synthetic.main.fragment_add_project.*
 import java.util.*
 

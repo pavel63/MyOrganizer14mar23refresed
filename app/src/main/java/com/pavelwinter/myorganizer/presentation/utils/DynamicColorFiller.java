@@ -1,4 +1,4 @@
-package com.pavelwinter.myorganizer.presentation.mvp.utils.main.utils;
+package com.pavelwinter.myorganizer.presentation.utils;
 
 import android.graphics.Canvas;
 import android.graphics.ColorFilter;

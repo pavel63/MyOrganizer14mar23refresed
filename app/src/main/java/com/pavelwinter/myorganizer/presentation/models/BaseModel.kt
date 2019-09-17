@@ -1,6 +1,6 @@
-package com.pavelwinter.myorganizer.presentation.mvp.utils.main.models
+package com.pavelwinter.myorganizer.presentation.models
 
-import com.pavelwinter.myorganizer.presentation.mvp.utils.main.utils.PriorityInterface
+import com.pavelwinter.myorganizer.presentation.utils.PriorityInterface
 
 /**for reusing and have't copypasts*
  * @param id

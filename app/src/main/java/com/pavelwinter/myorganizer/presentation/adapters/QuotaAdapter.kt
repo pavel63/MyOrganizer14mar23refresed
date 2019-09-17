@@ -1,4 +1,4 @@
-package com.pavelwinter.myorganizer.presentation.mvp.utils.main.adapters
+package com.pavelwinter.myorganizer.presentation.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,7 +6,6 @@ import com.pavelwinter.myorganizer.R
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.pavelwinter.myorganizer.data.db.db_entities.ParentType
-import com.pavelwinter.myorganizer.presentation.mvp.utils.main.models.QuotaModel
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.row_quota.view.*
 

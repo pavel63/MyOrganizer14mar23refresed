@@ -1,4 +1,4 @@
-package com.pavelwinter.myorganizer.presentation.mvp.utils.main.utils
+package com.pavelwinter.myorganizer.presentation.utils
 
 enum class PriorityInterface(inta : Int) {
 

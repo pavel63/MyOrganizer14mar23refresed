@@ -1,12 +1,12 @@
-package com.pavelwinter.myorganizer.presentation.mvp.utils.main.ui
+package com.pavelwinter.myorganizer.presentation.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.LabelVisibilityMode
-import com.pavelwinter.myorganizer.presentation.mvp.utils.main.fragments.ProjectsFragment
-import com.pavelwinter.myorganizer.presentation.mvp.utils.main.fragments.QuotaFragment
-import com.pavelwinter.myorganizer.presentation.mvp.utils.main.fragments.TaskListFragment
+import com.pavelwinter.myorganizer.presentation.fragments.ProjectsFragment
+import com.pavelwinter.myorganizer.presentation.fragments.QuotaFragment
+import com.pavelwinter.myorganizer.presentation.fragments.TaskListFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import timber.log.Timber
 

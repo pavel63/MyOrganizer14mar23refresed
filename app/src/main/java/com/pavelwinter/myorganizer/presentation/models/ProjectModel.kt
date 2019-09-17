@@ -1,4 +1,4 @@
-package com.pavelwinter.myorganizer.presentation.mvp.utils.main.models
+package com.pavelwinter.myorganizer.presentation.models
 
 data class ProjectModel(
     var createDate : Long,

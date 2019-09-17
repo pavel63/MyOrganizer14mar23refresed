@@ -1,4 +1,4 @@
-package com.pavelwinter.myorganizer.presentation.mvp.utils.main.view_models
+package com.pavelwinter.myorganizer.presentation.view_models
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

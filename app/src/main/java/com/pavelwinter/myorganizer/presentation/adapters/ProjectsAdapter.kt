@@ -1,4 +1,4 @@
-package com.pavelwinter.myorganizer.presentation.mvp.utils.main.adapters
+package com.pavelwinter.myorganizer.presentation.adapters
 
 import android.view.LayoutInflater
 import android.view.View

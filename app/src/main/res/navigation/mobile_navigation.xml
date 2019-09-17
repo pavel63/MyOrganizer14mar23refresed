@@ -7,17 +7,17 @@
 
     <fragment
         android:id="@+id/taskListFragment"
-        android:name="com.pavelwinter.myorganizer.presentation.mvp.utils.main.fragments.TaskListFragment"
+        android:name="com.pavelwinter.myorganizer.presentation.fragments.TaskListFragment"
         android:label="task_list_fragment"
         tools:layout="@layout/task_list_fragment" />
     <fragment
         android:id="@+id/quotaFragment"
-        android:name="com.pavelwinter.myorganizer.presentation.mvp.utils.main.fragments.QuotaFragment"
+        android:name="com.pavelwinter.myorganizer.presentation.fragments.QuotaFragment"
         android:label="quota_fragment"
         tools:layout="@layout/quota_fragment" />
     <fragment
         android:id="@+id/projectsFragment"
-        android:name="com.pavelwinter.myorganizer.presentation.mvp.utils.main.fragments.ProjectsFragment"
+        android:name="com.pavelwinter.myorganizer.presentation.fragments.ProjectsFragment"
         android:label="projects_fragment"
         tools:layout="@layout/projects_fragment" />
 </navigation>

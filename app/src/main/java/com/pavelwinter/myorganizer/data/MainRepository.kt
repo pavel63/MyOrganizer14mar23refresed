@@ -1,7 +1,7 @@
 package com.pavelwinter.myorganizer.data
 
 import com.pavelwinter.myorganizer.data.db.db_entities.DaoSession
-import com.pavelwinter.myorganizer.presentation.mvp.utils.main.utils.App
+import com.pavelwinter.myorganizer.presentation.utils.App
 
 object MainRepository : IMainRepository{
     override fun getSharedPrefsRepository() {

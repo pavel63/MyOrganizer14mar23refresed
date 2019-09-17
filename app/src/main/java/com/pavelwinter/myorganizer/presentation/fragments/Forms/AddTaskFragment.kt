@@ -1,18 +1,14 @@
-package com.pavelwinter.myorganizer.presentation.mvp.utils.main.fragments.Forms
+package com.pavelwinter.myorganizer.presentation.fragments.Forms
 
 
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
-import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.DatePicker
-import android.widget.TextView
-import android.widget.TimePicker
 import com.pavelwinter.myorganizer.R
 import java.util.*
 

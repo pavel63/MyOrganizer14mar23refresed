@@ -1,4 +1,4 @@
-package com.pavelwinter.myorganizer.presentation.mvp.utils.main.fragments
+package com.pavelwinter.myorganizer.presentation.fragments
 
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
@@ -11,9 +11,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.pavelwinter.myorganizer.R
 import com.pavelwinter.myorganizer.data.db.db_entities.ParentType
 import com.pavelwinter.myorganizer.data.mocks.DataTypesGenerator
-import com.pavelwinter.myorganizer.presentation.mvp.utils.main.view_models.QuotaViewModel
-import com.pavelwinter.myorganizer.presentation.mvp.utils.main.adapters.QuotaAdapter
-import com.pavelwinter.myorganizer.presentation.mvp.utils.main.models.QuotaModel
+import com.pavelwinter.myorganizer.presentation.view_models.QuotaViewModel
+import com.pavelwinter.myorganizer.presentation.adapters.QuotaAdapter
 import kotlinx.android.synthetic.main.quota_fragment.*
 
 class QuotaFragment : Fragment() {

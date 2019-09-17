@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.mvp.utils.main.fragments.QuotaFragment">
+    tools:context=".presentation.fragments.QuotaFragment">
 
    <androidx.recyclerview.widget.RecyclerView
        tools:listitem="@layout/row_quota"
