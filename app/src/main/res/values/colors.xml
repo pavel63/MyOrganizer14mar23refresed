@@ -5,4 +5,6 @@
     <color name="colorAccent">#1ED526</color>
 
     <color name="experiment">#0FDA17</color>
+
+    <color name="text_color_dark">@android:color/black</color>
 </resources>

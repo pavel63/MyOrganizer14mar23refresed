@@ -6,18 +6,16 @@
     android:orientation="vertical">
 
     <TextView
+        style="@style/DarkWrapText"
         tools:text="Name of project"
         android:textSize="18sp"
-        android:id="@+id/row_project_item_title_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:id="@+id/row_project_item_title_tv"/>
 
     <TextView
+        style="@style/DarkWrapText"
         android:layout_marginTop="4dp"
         tools:text="done 2 of 5 tasks"
-        android:id="@+id/row_project_item_done_of_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:id="@+id/row_project_item_done_of_tv"/>
 
     <View
         android:layout_margin="8dp"
