@@ -6,50 +6,6 @@
     app:startDestination="@id/projectsFragment">
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="com.pavelwinter.myorganizer.presentation.mvp.utils.main.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
-
-    <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.pavelwinter.myorganizer.presentation.mvp.utils.main.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
-
-    <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.pavelwinter.myorganizer.presentation.mvp.utils.main.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
-
-    <fragment
-        android:id="@+id/nav_tools"
-        android:name="com.pavelwinter.myorganizer.presentation.mvp.utils.main.ui.tools.ToolsFragment"
-        android:label="@string/menu_tools"
-        tools:layout="@layout/fragment_tools" />
-
-    <fragment
-        android:id="@+id/nav_share"
-        android:name="com.pavelwinter.myorganizer.presentation.mvp.utils.main.ui.share.ShareFragment"
-        android:label="@string/menu_share"
-        tools:layout="@layout/fragment_share" />
-
-    <fragment
-        android:id="@+id/nav_send"
-        android:name="com.pavelwinter.myorganizer.presentation.mvp.utils.main.ui.send.SendFragment"
-        android:label="@string/menu_send"
-        tools:layout="@layout/fragment_send" />
-    <fragment
-        android:id="@+id/experimentExpandable"
-        android:name="com.pavelwinter.myorganizer.experimental.ProjectsFragment"
-        android:label="fragment_experiment_expandable"
-        tools:layout="@layout/fragment_experiment_expandable" />
-    <fragment
-        android:id="@+id/addTaskFragment"
-        android:name="com.pavelwinter.myorganizer.presentation.mvp.utils.main.fragments.Forms.AddTaskFragment"
-        android:label="AddTaskFragment" />
-    <fragment
         android:id="@+id/taskListFragment"
         android:name="com.pavelwinter.myorganizer.presentation.mvp.utils.main.fragments.TaskListFragment"
         android:label="task_list_fragment"

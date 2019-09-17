@@ -21,7 +21,7 @@ import java.util.Map;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ProjectsFragment extends Fragment {
+public class ProjectsFragmentExpandableExperim extends Fragment {
 
 
     private String[] mGroupsArray = new String[]{"Зима", "Весна", "Лето", "Осень"};
@@ -32,7 +32,7 @@ public class ProjectsFragment extends Fragment {
     private String[] mAutumnMonthsArray = new String[]{"Сентябрь", "Октябрь", "Ноябрь"};
 
 
-    public ProjectsFragment() {
+    public ProjectsFragmentExpandableExperim() {
         // Required empty public constructor
     }
 

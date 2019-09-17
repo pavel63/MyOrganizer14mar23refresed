@@ -10,17 +10,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".experimental.ExperimentalActivity">
-        </activity>
-        <activity
-            android:name=".presentation.mvp.utils.main.NavigDrawerActivity"
-            android:label="@string/title_activity_navig_drawer"
-            android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".presentation.mvp.utils.main.ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".presentation.mvp.utils.main.NavigDrawerActivity"
+            android:label="@string/title_activity_navig_drawer"
+            android:theme="@style/AppTheme.NoActionBar">
+
         </activity>
     </application>
 
