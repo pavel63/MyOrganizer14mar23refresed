@@ -1,22 +1,20 @@
 package com.pavelwinter.myorganizer.presentation.fragments
 
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
-
-import com.pavelwinter.myorganizer.R
 import com.pavelwinter.myorganizer.data.db.db_entities.ParentType
 import com.pavelwinter.myorganizer.data.mocks.DataTypesGenerator
+import com.pavelwinter.myorganizer.databinding.ProjectsFragmentBinding
 import com.pavelwinter.myorganizer.presentation.adapters.ProjectsAdapter
 import com.pavelwinter.myorganizer.presentation.view_models.ProjectsViewModel
-import kotlinx.android.synthetic.main.projects_fragment.*
 
 class ProjectsFragment : Fragment() {
-
+lateinit var binding : ProjectsFragmentBinding
     companion object {
         fun newInstance() = ProjectsFragment()
     }
@@ -26,8 +24,9 @@ class ProjectsFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.projects_fragment, container, false)
+    ): View {
+        binding = ProjectsFragmentBinding.inflate(LayoutInflater.from(context),container, false)
+        return binding.root
     }
 
 
@@ -39,7 +38,7 @@ class ProjectsFragment : Fragment() {
 
 
     private fun setupAdapter(projectsFragment: List<ParentType>) {
-        with(projects_fragment_rv) {
+        with(binding.projectsFragmentRv) {
             adapter = ProjectsAdapter(projectsFragment)
             layoutManager = LinearLayoutManager(this@ProjectsFragment.activity)
         }

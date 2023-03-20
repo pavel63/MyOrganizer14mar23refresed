@@ -11,9 +11,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.pavelwinter.myorganizer.R
 import com.pavelwinter.myorganizer.data.db.db_entities.ParentType
 import com.pavelwinter.myorganizer.data.mocks.DataTypesGenerator
+import com.pavelwinter.myorganizer.databinding.FragmentAddProjectBinding
+import com.pavelwinter.myorganizer.databinding.QuotaFragmentBinding
 import com.pavelwinter.myorganizer.presentation.view_models.QuotaViewModel
 import com.pavelwinter.myorganizer.presentation.adapters.QuotaAdapter
-import kotlinx.android.synthetic.main.quota_fragment.*
 
 class QuotaFragment : Fragment() {
 
@@ -21,14 +22,15 @@ class QuotaFragment : Fragment() {
         fun newInstance() =
             QuotaFragment()
     }
-
+lateinit var binding : QuotaFragmentBinding
     private lateinit var viewModel: QuotaViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.quota_fragment, container, false)
+    ): View {
+        binding = QuotaFragmentBinding.inflate(LayoutInflater.from(context), container, false)
+        return binding.root
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -46,7 +48,7 @@ class QuotaFragment : Fragment() {
 
     private fun setList(quotaModelList : List<ParentType>){
 
-        with(quota_fragment_rv) {
+        with(binding.quotaFragmentRv) {
             adapter = QuotaAdapter(quotaModelList)
             layoutManager = LinearLayoutManager(this@QuotaFragment.context)
         }

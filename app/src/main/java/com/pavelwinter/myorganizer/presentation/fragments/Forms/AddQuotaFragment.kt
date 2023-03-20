@@ -9,22 +9,22 @@ import android.widget.NumberPicker
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import com.pavelwinter.myorganizer.R
-import kotlinx.android.synthetic.main.fragment_add_quota.*
-import kotlinx.android.synthetic.main.fragment_add_quota.hour_picker
-import kotlinx.android.synthetic.main.picker_dialog_quota.minute_picker
-import kotlinx.android.synthetic.main.picker_dialog_quota.period_picker
+import com.pavelwinter.myorganizer.databinding.FragmentAddProjectBinding
+import com.pavelwinter.myorganizer.databinding.FragmentAddQuotaBinding
 
 
 class AddQuotaFragment : Fragment() {
 
     internal var str = arrayOf("a", "b", "c")
-
+   lateinit var binding: FragmentAddQuotaBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_add_quota, container, false)
+    ): View {
+
+        binding = FragmentAddQuotaBinding.inflate(LayoutInflater.from(context), container, false)
+        return binding.root
     }
 
 
@@ -32,15 +32,15 @@ class AddQuotaFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
 
-        tv_digit_hour ?.text = 0.toString()
-        tv_descr_hour ?.text = "h   "
-        tv_descr_minute ?.text = 0.toString()
-        tv_descr_minute ?.text = "m   "
-        tv_descr_period ?.text = " for period: "
-        tv_variant ?.text = "week"
+       binding.tvDigitHour .text = 0.toString()
+       binding.tvDescrHour .text = "h   "
+       binding.tvDescrMinute .text = 0.toString()
+       binding.tvDescrMinute .text = "m   "
+       binding.tvDescrPeriod .text = " for period: "
+       binding.tvDigitMinute.text = "week"
 
 
-        ll_quota ?.setOnClickListener {
+       binding.llQuota .setOnClickListener {
 
             this.context?.let {
 
@@ -52,27 +52,27 @@ class AddQuotaFragment : Fragment() {
                 d.setView(dialogView)
 
 
-                hour_picker?.maxValue = 200
-                hour_picker?.minValue = 0
+              binding.hourPicker.maxValue = 200
+                binding.hourPicker.minValue = 0
 
-                minute_picker.setMaxValue(59)
-                minute_picker.setMinValue(0)
+                binding.minutePicker.maxValue = 59
+                binding.minutePicker.minValue = 0
 
-                period_picker.setMinValue(0)
-                period_picker.setMaxValue(2)
+                binding.periodPicker.minValue = 0
+                binding.periodPicker.maxValue = 2
 
-                period_picker.setDisplayedValues(str)
+                binding.periodPicker.displayedValues = str
                 //new String[]{"a", "b", "c"});
 
 
-                hour_picker?.setOnValueChangedListener { numberPicker, i, i1 ->
+               binding.hourPicker .setOnValueChangedListener { numberPicker, i, i1 ->
                     Log.d(
                         "TAG",
                         "onValueChange: $i1"
                     )
                 }
 
-                minute_picker.setOnValueChangedListener(NumberPicker.OnValueChangeListener { numberPicker, i, i1 ->
+               binding.minutePicker .setOnValueChangedListener(NumberPicker.OnValueChangeListener { numberPicker, i, i1 ->
                     Log.d(
                         "TAG",
                         "onValueChange: $i1"
@@ -80,7 +80,7 @@ class AddQuotaFragment : Fragment() {
                 })
 
 
-                period_picker.setOnValueChangedListener(NumberPicker.OnValueChangeListener { numberPicker, i, i1 ->
+               binding.periodPicker.setOnValueChangedListener(NumberPicker.OnValueChangeListener { numberPicker, i, i1 ->
                     Log.d(
                         "TAG",
                         "onValueChange: $i1"
@@ -89,14 +89,14 @@ class AddQuotaFragment : Fragment() {
 
 
                 d.setPositiveButton("Done") { dialogInterface, i ->
-                    Log.d("TAG", "onClickh: " + hour_picker?.value)
-                    Log.d("TAG", "onClickm: " + minute_picker.getValue())
-                    Log.d("TAG", "onClickp: " + period_picker.getValue())
+                    Log.d("TAG", "onClickh: " + binding.hourPicker.value)
+                    Log.d("TAG", "onClickm: " + binding.minutePicker.getValue())
+                    Log.d("TAG", "onClickp: " + binding.periodPicker.getValue())
 
 
-                    tv_digit_hour?.text = hour_picker?.value.toString()
-                    tv_digit_minute?.setText(minute_picker.getValue().toString())
-                    tv_variant?.text = str[period_picker.getValue()]
+                  binding.tvDigitHour .text = binding.hourPicker.value.toString()
+                    binding.tvDigitMinute.text = binding.minutePicker.value.toString()
+                    binding.tvVariant.text = str[binding.periodPicker.value]
                 }
                 d.setNegativeButton(
                     "Cancel"
@@ -107,7 +107,7 @@ class AddQuotaFragment : Fragment() {
             }
         }
 
-        btnq ?.setOnClickListener {  }
+       binding.btnq.setOnClickListener {  }
 
        }
 

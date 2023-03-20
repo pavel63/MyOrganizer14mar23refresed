@@ -1,37 +1,41 @@
 package com.pavelwinter.myorganizer.presentation.ui
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.LabelVisibilityMode
+import com.pavelwinter.myorganizer.databinding.ActivityMainBinding
 import com.pavelwinter.myorganizer.presentation.fragments.ProjectsFragment
 import com.pavelwinter.myorganizer.presentation.fragments.QuotaFragment
 import com.pavelwinter.myorganizer.presentation.fragments.TaskListFragment
-import kotlinx.android.synthetic.main.activity_main.*
 import timber.log.Timber
 
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var binding : ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(com.pavelwinter.myorganizer.R.layout.activity_main)
 
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        val view: View = binding.root
+        setContentView(view)
         bottomNavigationInit()
     }
 
 
-
     private fun bottomNavigationInit() {
-        bnve?.enableAnimation(false)
-        bnve?.labelVisibilityMode = LabelVisibilityMode.LABEL_VISIBILITY_LABELED
-        bnve?.setTextSize(10.0f)
-        bnve?.setIconSize(24f, 24f)
+        binding.bnve.enableAnimation(false)
+       binding. bnve.labelVisibilityMode = LabelVisibilityMode.LABEL_VISIBILITY_LABELED
+       binding. bnve.setTextSize(10.0f)
+       binding. bnve.setIconSize(24f, 24f)
 
         goToFragment(TaskListFragment())
-        bnve ?.currentItem = 0
+       binding. bnve.currentItem = 0
 
-        bnve?.setOnNavigationItemSelectedListener { item ->
+        binding.bnve.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
 
                 com.pavelwinter.myorganizer.R.id.bottom_navigation_list_m -> {
@@ -60,14 +64,11 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-
-
     private fun goToFragment(fragmentTo: Fragment) {
         supportFragmentManager.beginTransaction()
             .replace(com.pavelwinter.myorganizer.R.id.nav_host_fragment, fragmentTo)
             .commit()
     }
-
 
 
     private fun getVisibleFragment(): Fragment? {
